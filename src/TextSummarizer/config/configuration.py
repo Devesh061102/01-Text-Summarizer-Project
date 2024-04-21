@@ -87,8 +87,6 @@ class ConfigurationManager:
     def get_model_evaluation_config(self) -> ModelEvaluationConfig:
         config = self.config.model_evaluation
 
-        create_directories([config.root_dir])
-
         model_evaluation_config = ModelEvaluationConfig(
             root_dir=config.root_dir,
             data_path=config.data_path,
@@ -99,3 +97,4 @@ class ConfigurationManager:
         )
 
         return model_evaluation_config
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Summarization</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Chat Summarization Tool</h1>
+        <form action="/summarize" method="post">
+            <div class="input-container">
+                <textarea name="input_text" id="input-text" placeholder="Enter your text here..." oninput="countWords(this)">{{ input_text }}</textarea>
+                <div class="word-counter" id="word-counter">Word count: <span id="word-count">0</span></div>
+            </div>
+            <button type="submit" id="summarize-btn">Summarize</button>
+        </form>
+    </div>
+    <script>
+        function countWords(textarea) {
+            var wordCount = textarea.value.trim().split(/\s+/).filter(Boolean).length;
+            document.getElementById('word-count').textContent = wordCount;
+        }
+    </script>
+</body>
+</html>

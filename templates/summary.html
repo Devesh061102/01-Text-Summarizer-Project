@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Summary</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        .container {
+            position: relative;
+        }
+        #summary-textarea {
+            margin-top: 20px;
+            width: 100%;
+            height: 300px;
+        }
+        #word-count {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Your Text Summary</h1>
+        <textarea id="summary-textarea" readonly>{{ summary }}</textarea>
+        <div id="word-count">Word count: <span>{{ word_count }}</span></div>
+    </div>
+</body>
+</html>
