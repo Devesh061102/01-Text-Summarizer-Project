@@ -1,7 +1,7 @@
 
 # Chat Summarization Tool
 
-It is NLP based project which can summarize conversations or dialogues between users in a chat interface
+It is NLP based project which can summarize conversations or dialogues between users in a chat interface.
 
 
 
